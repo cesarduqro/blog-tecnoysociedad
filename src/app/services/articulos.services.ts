@@ -39,6 +39,8 @@ export class ArticulosServices {
       (resp:Articulos[]) =>{
         this.articulos = resp;
       });
+    return this.http.get('https://blog-tecnoysociedad-default-rtdb.firebaseio.com/articulos.json');
+    //this.http.get('https://blog-tecnoysociedad-default-rtdb.firebaseio.com/articulos.json');
   }
 
   getArticle(idx: string) {

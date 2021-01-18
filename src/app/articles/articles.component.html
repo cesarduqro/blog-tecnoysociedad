@@ -1,8 +1,13 @@
 <div class="container p-5">
   <h1 class="titulo-seccion">{{titulo}}</h1>
+  <div class="d-flex justify-content-center" *ngIf="isResultsLoading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
   <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
     <!--  Card  -->
-    <div class="col" *ngFor="let articulo of _servicios.articulos; let i=index">
+    <div class="col" *ngFor="let articulo of articulos; let i=index">
       <div class="card h-100">
         <img src="{{articulo.image}}" class="card-img-top" alt="{{articulo.titulo}}">
         <div class="card-body">

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Articulos, ArticulosServices} from '../services/articulos.services';
 import {FormatWidth, getLocaleTimeFormat} from '@angular/common';
 
@@ -7,17 +7,24 @@ import {FormatWidth, getLocaleTimeFormat} from '@angular/common';
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })
-export class ArticlesComponent implements OnInit {
+export class ArticlesComponent implements AfterViewInit {
   titulo: string;
   articulos: Articulos[] = [];
+  isResultsLoading: boolean = true;
 
   constructor(public _servicios: ArticulosServices) {
     this.titulo = 'Articulos Recientes';
   }
 
-  ngOnInit(): void {
-    //this.articulos = this._servicios.getArticles();
-    console.log(this.articulos)
+  ngAfterViewInit() {
+    this._servicios.getArticles().subscribe(
+      (resp:any) =>{
+        this.articulos = resp;
+        if(resp.length>0){
+          this.isResultsLoading = false
+        }
+      });;
+
   }
 
 }

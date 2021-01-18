@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -61,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "untitled:build"
+            "browserTarget": "blog-tecnoysociedad:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "docs"
+              "browserTarget": "blog-tecnoysociedad"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "untitled:build"
+            "browserTarget": "blog-tecnoysociedad:build"
           }
         },
         "test": {
@@ -109,11 +110,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "untitled:serve"
+            "devServerTarget": "blog-tecnoysociedad:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "untitled:serve:production"
+              "devServerTarget": "blog-tecnoysociedad:serve:production"
             }
           }
         }
