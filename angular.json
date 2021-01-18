@@ -65,7 +65,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "untitled:build:production"
+              "browserTarget": "docs"
             }
           }
         },
