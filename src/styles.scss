@@ -1,0 +1,37 @@
+/********************* R E S E T *************************/
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  padding-bottom: 40px;
+}
+img{
+  border: none;
+  border-radius: 3px;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+}
+a:hover{
+  color: #B82924;
+}
+p{
+  margin-bottom: 8px;
+}
+::-moz-selection {
+  background-color: #B82924;
+  color: #fff;
+}
+
+/* Works in Safari */
+::selection {
+  background-color: #B82924;
+  color: #fff;
+}
+
+
