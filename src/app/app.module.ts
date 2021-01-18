@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ArticleComponent } from './articles/article/article.component';
+import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { ArticleComponent } from './articles/article/article.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxExtendedPdfViewerModule,
+
   ],
   providers: [ ArticulosServices],
   bootstrap: [AppComponent],

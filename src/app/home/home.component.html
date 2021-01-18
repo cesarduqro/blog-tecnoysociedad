@@ -5,20 +5,24 @@
     <p>{{descripcion_header}}</p>
   </div>
 </div>-->
-<div class="main-container">
+<div class="main-container container">
   <div class="bg-light p-5 rounded-lg container my-3 banner">
     <h1 class="display-4">{{titulo_header}}</h1>
     <p class="lead">{{descripcion_header}}</p>
     <hr class="my-4">
+    <button class="btn btn-outline-dark"> Mas información</button>
   </div>
   <div class="container my-3">
     <div class="row">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <!--<img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-dark">Go somewhere</a>
+        </div>-->
+        <div class="card-body">
+          <ngx-extended-pdf-viewer [src]="'assets/docs/tecno-sociedad.pdf'" useBrowserLocale="true" height="80vh"></ngx-extended-pdf-viewer>
         </div>
       </div>
     </div>
