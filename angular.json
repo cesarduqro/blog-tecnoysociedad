@@ -71,7 +71,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "blog-tecnoysociedad"
+              "browserTarget": "blog-tecnoysociedad:build:production"
             }
           }
         },
