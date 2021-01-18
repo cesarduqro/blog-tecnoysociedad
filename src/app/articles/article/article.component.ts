@@ -10,7 +10,7 @@ import {ArticulosServices} from '../../services/articulos.services';
 export class ArticleComponent {
 
   articulo: any = {};
-  id:number;
+  id:any;
 
   constructor(private activatedRoute: ActivatedRoute, private _services: ArticulosServices) {
     this.activatedRoute.params.subscribe(params => {
