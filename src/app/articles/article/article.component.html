@@ -1,0 +1,150 @@
+<div class="container p-5">
+  <!-- Articulo-->
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{articulo.image}}" class="card-img-top" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{articulo.titulo}}</h2>
+          <p class="card-text">{{articulo.resumen}} <br> {{articulo.descripcion}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- caso 0-->
+  <div class="container mt-4" *ngIf="id==='0'">
+    <h1 class="mat-title">Componentes de la ciencia</h1>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <p class="card-text">Representado por
+              los científicos y por
+              todo el personal
+              que colabora con
+              los fines de la
+              actividad científica.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-success">
+          <div class="card-body">
+            <p class="card-text">Conjunto de
+              relaciones que, en
+              el marco del
+              trabajo, relaciones
+              entre las
+              sociedades, los
+              grupos y equipos
+              de trabajo,
+              universidades, etc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-warning">
+          <div class="card-body">
+            <p class="card-text">Comprende
+              procesos para
+              generar los
+              conocimientos
+              teóricos,
+              metodológicos,
+              prácticos u otros se
+              manifiesta por
+              medios formales e
+              informales.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-info">
+          <div class="card-body">
+            <p class="card-text">Comprende
+              instrumentos,
+              equipos u otros
+              elementos que
+              constituyen
+              herramientas que
+              los científicos
+              utilizan en el marco
+              del desarrollo la de
+              actividad científica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- caso 1 -->
+  <div class="container mt-4" *ngIf="id==='1'">
+    <h1 class="mat-title">Términos</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <p class="card-text">Un conjunto de conocimientos o saberes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-success">
+          <div class="card-body">
+            <p class="card-text">Una aplicabilidad de ese conocimiento a las
+              actividades humanas o saber hacer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-warning">
+          <div class="card-body">
+            <p class="card-text">Una finalidad utilitaria, conducente a obtener
+              resultados o saber hacer cosas útiles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- caso 2-->
+  <div class="container mt-4" *ngIf="id==='2'">
+    <h1 class="mat-title">Características</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <p class="card-text">La sociedad actual es una sociedad que vive inmersa en un mundo donde
+              prácticamente todo lo que nos rodea es de alguna manera un producto de la
+              ciencia y la tecnología.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-warning">
+          <div class="card-body">
+            <p class="card-text">Se da un fenómeno hoy en la sociedad que esta presente en todo contexto: el
+              riesgo. Asociados con el uso de artefactos tecnocientíficos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-success">
+          <div class="card-body">
+            <p class="card-text">Tal situación, y la magnitud y naturaleza de los riesgos que hoy debemos
+              afrontar, hace necesario el desarrollo de nuevos enfoques éticos como el
+              “principio de responsabilidad”.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
