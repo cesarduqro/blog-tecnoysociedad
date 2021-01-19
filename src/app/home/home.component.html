@@ -1,14 +1,7 @@
-<!--<div class="container mt-3">
-  &lt;!&ndash; Header &ndash;&gt;
-  <div class="p-3 px-5 banner">
-    <h1>{{titulo_header}}</h1>
-    <p>{{descripcion_header}}</p>
-  </div>
-</div>-->
 <div class="main-container container">
   <div class="bg-light p-5 rounded-lg container my-3 banner">
-    <h1 class="display-4">{{titulo_header}}</h1>
-    <p class="lead">{{descripcion_header}}</p>
+    <h1 class="display-4" style="font-weight: 600">{{titulo_header}}</h1>
+    <p class="lead" style="font-weight: 500">{{descripcion_header}}</p>
     <hr class="my-4">
     <button class="btn btn-outline-dark"> Mas información</button>
   </div>
@@ -22,7 +15,12 @@
           <a href="#" class="btn btn-dark">Go somewhere</a>
         </div>-->
         <div class="card-body">
-          <ngx-extended-pdf-viewer [src]="'assets/docs/tecno-sociedad.pdf'" useBrowserLocale="true" height="80vh"></ngx-extended-pdf-viewer>
+          <div>
+            <h3 class="card-title" style="font-weight: 500">Contenido de la materia</h3>
+            <br>
+          </div>
+          <ngx-extended-pdf-viewer [src]="'assets/docs/contenido_materia_tys.pdf'" useBrowserLocale="true"
+                                   height="80vh" [page]="12"></ngx-extended-pdf-viewer>
         </div>
       </div>
     </div>

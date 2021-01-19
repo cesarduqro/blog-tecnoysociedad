@@ -1,0 +1,27 @@
+<div class="container p-5">
+  <h1 style="font-weight: 500;font-size: 28px;">{{titulo}}</h1>
+  <!--- Spinner --->
+  <div class="d-flex justify-content-center" *ngIf="isResultsLoading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-1 g-4">
+    <!--  Card  -->
+    <div class="col">
+      <div class="h-100">
+        <div class="card-body">
+          <p class="card-text">{{acerca_de}}</p>
+          <img style="width: 60%" src="assets/img/acerca_de.png" alt="repositorio github cesar duque romero">
+          <br>
+          <div class="d-grid gap-2 mt-4">
+            <button type="button" class="btn btn-outline-warning">
+              Ir al repositorio
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

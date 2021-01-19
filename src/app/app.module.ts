@@ -18,6 +18,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ArticleComponent } from './articles/article/article.component';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
     FooterComponent,
     ArticlesComponent,
     ArticleComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

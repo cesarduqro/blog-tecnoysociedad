@@ -1,11 +1,9 @@
 .banner h1 {
-  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 40px;
   color: black;
 }
 .banner p {
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: #fd7e14;
 }
