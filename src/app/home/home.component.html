@@ -6,22 +6,39 @@
     <button class="btn btn-outline-dark"> Mas información</button>
   </div>
   <div class="container my-3">
-    <div class="row">
-      <div class="card">
-        <!--<img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-dark">Go somewhere</a>
-        </div>-->
-        <div class="card-body">
-          <div>
-            <h3 class="card-title" style="font-weight: 500">Contenido de la materia</h3>
-            <br>
+    <div class="card">
+      <!--<img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-dark">Go somewhere</a>
+      </div>-->
+      <div class="card-body">
+        <h2 class="card-title" style="font-weight: 500">Ciencia y Sociedad</h2>
+        <div class="container">
+          <div class="row py-4">
+            <div class="col-sm">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" height="500px" width="100%" src='https://canal.uned.es/iframe/5a6f3b42b1111f1b4b8b4616'
+                        allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
+          <div class="row py-4">
+            <h3 class="card-subtitle mb-3" style="font-weight: 500">Contenido de la materia</h3>
+            <ngx-extended-pdf-viewer [src]="'assets/docs/contenido_materia_tys.pdf'" useBrowserLocale="true"
+                                     height="60vh" [page]="12"></ngx-extended-pdf-viewer>
+          </div>
+        </div>
+        <!--<iframe src='https://canal.uned.es/iframe/5a6f3b42b1111f1b4b8b4616' id='pumukitiframe' frameborder='0'
+                border='0' width='560' height='315' allowfullscreen></iframe>
+
+        <div class="container-fluid">
+          <h3 class="card-subtitle" style="font-weight: 500">Contenido de la materia</h3>
+          <br>
           <ngx-extended-pdf-viewer [src]="'assets/docs/contenido_materia_tys.pdf'" useBrowserLocale="true"
                                    height="80vh" [page]="12"></ngx-extended-pdf-viewer>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
