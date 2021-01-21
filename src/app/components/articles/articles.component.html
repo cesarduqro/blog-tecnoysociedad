@@ -1,0 +1,28 @@
+<app-sidenav></app-sidenav>
+<div class="container p-5">
+  <h1 class="titulo-seccion">{{titulo}}</h1>
+  <div class="d-flex justify-content-center" *ngIf="isResultsLoading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+    <!--  Card  -->
+    <div class="col" *ngFor="let articulo of articulos; let i=index">
+      <div class="card h-100">
+        <img src="{{articulo.image}}" class="card-img-top" alt="{{articulo.titulo}}">
+        <div class="card-body">
+          <h5 class="card-title">{{articulo.titulo}}</h5>
+          <p class="card-text">{{articulo.resumen}}</p>
+          <br>
+          <div class="d-grid gap-2">
+            <button [routerLink]="['/articulo',articulo.idx]"  type="button" class="btn btn-outline-warning">
+              Ver más...
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

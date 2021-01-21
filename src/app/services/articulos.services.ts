@@ -46,6 +46,28 @@ export class ArticulosServices {
   getArticle(idx: string) {
     return this.articulos[idx];
   }
+
+  searchArticulos(termino:string){
+    let articulosArr: Articulos[] = [];
+    termino = termino.toLowerCase()
+    /*for (let articulo of this.articulos){
+      let nombre = articulo.titulo.toLowerCase()
+      if (nombre.indexOf(termino) >=0){
+        articulosArr.push(articulo)
+      }
+    }*/
+    for (let i = 0; i< this.articulos.length; i++){
+      let articulo = this.articulos[i]
+
+      let nombre = articulo.titulo.toLowerCase()
+
+      if (nombre.indexOf(termino) >=0){
+        articulo.idx = i;
+        articulosArr.push(articulo)
+      }
+    }
+    return articulosArr;
+  }
 }
 
 export interface Articulos {
@@ -53,5 +75,6 @@ export interface Articulos {
   titulo: string,
   resumen: string,
   descripcion: string,
-  autor: string
+  autor: string,
+  idx?:number
 }

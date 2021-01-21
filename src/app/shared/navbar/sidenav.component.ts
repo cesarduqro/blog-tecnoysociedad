@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Articulos} from '../../services/articulos.services';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,16 +9,18 @@ import {Articulos} from '../../services/articulos.services';
 })
 export class SidenavComponent implements OnInit {
   titulo: string;
+  buscarTexto: string ;
 
-  constructor() {
+  constructor(private router:Router) {
     this.titulo = "Blog"
   }
 
   ngOnInit(): void {
+
   }
 
-  buscarArticulo(termino: string) {
-    let articulosArr: Articulos[] = [];
-    termino = termino.toLowerCase()
+  buscarArticulo(termino:string){
+    this.router.navigate(['/buscar',termino])
+    termino = "";
   }
 }

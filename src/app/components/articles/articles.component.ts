@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {Articulos, ArticulosServices} from '../services/articulos.services';
 import {FormatWidth, getLocaleTimeFormat} from '@angular/common';
+import {Articulos, ArticulosServices} from '../../services/articulos.services';
 
 @Component({
   selector: 'app-articles',
