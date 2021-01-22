@@ -1,11 +1,21 @@
 <app-sidenav></app-sidenav>
 <div class="container p-5">
   <h1 class="titulo-seccion">{{titulo}}</h1>
+  <!--  Boton crear articulo -->
+  <div class="row mt-3">
+    <div class="col">
+      <button [routerLink]="['/crear-articulo']" type="button" class="btn btn-outline-warning">
+        Crear Articulo
+      </button>
+    </div>
+  </div>
+  <!--  Loading shade -->
   <div class="d-flex justify-content-center" *ngIf="isResultsLoading">
     <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
+  <!--  Articulos -->
   <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
     <!--  Card  -->
     <div class="col" *ngFor="let articulo of articulos; let i=index">
@@ -16,7 +26,7 @@
           <p class="card-text">{{articulo.resumen}}</p>
           <br>
           <div class="d-grid gap-2">
-            <button [routerLink]="['/articulo',articulo.idx]"  type="button" class="btn btn-outline-warning">
+            <button [routerLink]="['/articulos',articulo.idx]"  type="button" class="btn btn-outline-warning">
               Ver más...
             </button>
           </div>
@@ -24,5 +34,6 @@
       </div>
     </div>
   </div>
+
 
 </div>

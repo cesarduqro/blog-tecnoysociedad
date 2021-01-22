@@ -1,24 +1,40 @@
-import {Component} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ArticulosServices} from '../../../services/articulos.services';
+import {ArticuloModel} from '../../../models/articulo.model';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styles: []
 })
-export class ArticleComponent {
+export class ArticleComponent implements OnInit, OnDestroy{
 
-  articulo: any = {};
-  id:any;
+  articulo: ArticuloModel = new ArticuloModel();
+  id:string;
 
-  constructor(private activatedRoute: ActivatedRoute, private _services: ArticulosServices) {
-    this.activatedRoute.params.subscribe(params => {
-      this.articulo = this._services.getArticle(params['id']);
-      this.id = params['id']
-    });
-    console.log(this.articulo)
+  constructor(private activatedRoute: ActivatedRoute,
+              private _services: ArticulosServices,
+              private router:Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
+  ngOnInit() {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    this._services.getArticle(id).subscribe(
+      (resp:ArticuloModel) =>{
+        console.log(resp)
+        //console.log(resp)
+        this.id = resp.idx
+        this.articulo = resp
+      });
+  }
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+      this.router.navigate([uri]));
+  }
 
+  ngOnDestroy() {
+
+  }
 }

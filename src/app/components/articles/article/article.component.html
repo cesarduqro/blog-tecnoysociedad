@@ -1,7 +1,16 @@
-<app-sidenav></app-sidenav>
 <div class="container p-5">
   <!-- Articulo-->
   <div class="card">
+    <div class="row text-start">
+      <div class="col d-flex justify-content-center align-items-center flex-column">
+        <form class="w-100 p-3">
+          <button class="btn btn-outline-danger" (click)="redirectTo('articulos')">
+            <i class="fa fa-arrow-left"></i>
+            Volver
+          </button>
+        </form>
+      </div>
+    </div>
     <div class="row g-0 p-4">
       <div class="col-md-4">
         <img src="{{articulo.image}}" class="card-img-top" alt="...">
@@ -13,7 +22,7 @@
         </div>
       </div>
       <!-- caso 0-->
-      <div class="container mt-4" *ngIf="id==='0'">
+      <div class="container mt-4" *ngIf="id=='0'">
         <h3 class="card-title">Componentes de la ciencia</h3>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
@@ -81,7 +90,7 @@
         </div>
       </div>
       <!-- caso 1 -->
-      <div class="container mt-4" *ngIf="id==='1'">
+      <div class="container mt-4" *ngIf="id=='1'">
         <h3 class="card-title">Términos</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
           <div class="col">
@@ -115,7 +124,7 @@
 
       </div>
       <!-- caso 2-->
-      <div class="container mt-4" *ngIf="id==='2'">
+      <div class="container mt-4" *ngIf="id=='2'">
         <h3 class="card-title">Características</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
@@ -149,7 +158,7 @@
         </div>
       </div>
       <!-- caso 3-->
-      <div class="container mt-4" *ngIf="id==='3'">
+      <div class="container mt-4" *ngIf="id=='3'">
         <div class="row row-cols-1 g-4 py-4">
           <div class="col">
             <h4 class="card-subtitle">¿A qué da respuesta la Ciencia, Tecnología y Sociedad (CTS) desde el punto de
@@ -217,7 +226,8 @@
         </div>
         <div class="row row-cols-1 g-4 py-4">
           <div class="col">
-            <h4 class="card-subtitle">¿Por qué unas tecnologías levantan grandes polémicas sociales, mientras que otras se
+            <h4 class="card-subtitle">¿Por qué unas tecnologías levantan grandes polémicas sociales, mientras que otras
+              se
               adoptan masivamente sin más? </h4>
             <br>
             <p>Esto ocurre debido al origen del estudio de ese desarrollo tecnológico, el cual podría ser a través
@@ -231,7 +241,7 @@
         </div>
       </div>
       <!-- caso 4-->
-      <div class="container mt-4" *ngIf="id==='4'">
+      <div class="container mt-4" *ngIf="id=='4'">
         <div class="row row-cols-1 g-4 py-4">
           <div class="col">
             <h4 class="card-subtitle">¿Cuál es el objetivo del trabajo ingenieril?</h4>
@@ -290,6 +300,74 @@
               comportamiento en condiciones operativas específicas; todo en lo que respecta a la función
               prevista, la economía de funcionamiento y la seguridad de la vida y la propiedad ".
             </p>
+          </div>
+        </div>
+      </div>
+      <!-- caso 5-->
+      <div class="container mt-4" *ngIf="id=='5'">
+        <div class="row row-cols-1 g-4 py-4">
+          <div class="col">
+            <div class="h-100">
+              <h3 class="card-title">Elementos que caraterizan a la sociedad esclavista</h3>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">Esclavos</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Capturados o prisioneros de guerras</td>
+                  </tr>
+                  <tr>
+                    <td>Mala fortuna de nacer en el núcleo familiar de un esclavo</td>
+                  </tr>
+                  <tr>
+                    <td>Delitos graves por hombres libres</td>
+                  </tr>
+                  <tr>
+                    <td>Contraían deudas</td>
+                  </tr>
+                  <tr>
+                    <td>El esclavo no tiene derecho</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 g-4 py-4">
+          <div class="col">
+            <h4 class="card-subtitle">¿Según la historia, de donde provienen los primeros esclavos?</h4>
+            <br>
+            <p>Los primeros escritos en los cuales hay constancia de la presencia de esclavos es en una gran
+              civilización que es en Mesopotamia, durante la época sumeria y de ahí recorre Persia, Grecia, Egipto y
+              China.
+            </p>
+          </div>
+        </div>
+        <div class="row row-cols-1 g-4 py-4">
+          <div class="col">
+            <h4 class="card-subtitle">¿Crees que aún es vigente el concepto de “sociedad esclavista”? ¿Se ha dado una
+              adaptación o evolución?</h4>
+            <br>
+            <p>El concepto se ha transformado, puesto que en la actualidad existe mas una sociedad consumista y
+              esclavizada a un sistema en el que el capital esta por encima de todo, incluso de los recursos que
+              aparentemente son nuestros derechos: como la educación, la salud, el agua, los alimentos, etc. Una
+              sociedad esclavista porque depende del dinero para sobrevivir.
+            </p>
+            <p>En la Universidad Ecotec encontramos las siguientes categorías: Ingeniería Industrial,
+              Ingeniería en Software, Ingeniería en TI, Ingeniería en Agronomía. También están las áreas
+              de estudio mas centralizadas en la Física y las Matemáticas para el estudio de la geografía
+              de la tierra como lo es la Geofísica.
+            </p>
+          </div>
+        </div>
+        <div class="row row-cols-1 g-4 py-4">
+          <div class="col">
+
           </div>
         </div>
       </div>

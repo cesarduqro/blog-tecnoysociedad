@@ -16,12 +16,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
 import { AboutComponent } from './components/pages/about/about.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './components/pages/login/login.component';
 import {BusquedaComponent} from './components/articles/busqueda/busqueda.component';
 import {ArticlesComponent} from './components/articles/articles.component';
 import {ArticleComponent} from './components/articles/article/article.component';
 import {HomeComponent} from './components/pages/home/home.component';
+import { NewarticleComponent } from './components/pages/newarticle/newarticle.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {HomeComponent} from './components/pages/home/home.component';
     AboutComponent,
     BusquedaComponent,
     LoginComponent,
+    NewarticleComponent,
   ],
     imports: [
         BrowserModule,
@@ -42,6 +44,7 @@ import {HomeComponent} from './components/pages/home/home.component';
         HttpClientModule,
         NgxExtendedPdfViewerModule,
         FormsModule,
+        ReactiveFormsModule,
 
     ],
   providers: [ ArticulosServices],

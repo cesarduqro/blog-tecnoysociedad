@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {FormatWidth, getLocaleTimeFormat} from '@angular/common';
 import {Articulos, ArticulosServices} from '../../services/articulos.services';
+import {ArticuloModel} from '../../models/articulo.model';
 
 @Component({
   selector: 'app-articles',
@@ -9,7 +10,7 @@ import {Articulos, ArticulosServices} from '../../services/articulos.services';
 })
 export class ArticlesComponent implements AfterViewInit {
   titulo: string;
-  articulos: Articulos[] = [];
+  articulos: ArticuloModel[] = [];
   isResultsLoading: boolean = true;
 
   constructor(public _servicios: ArticulosServices) {
@@ -17,9 +18,12 @@ export class ArticlesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this._servicios.getArticles().subscribe(
+    this._servicios.getArticles()
+      .subscribe(
       (resp:any) =>{
         this.articulos = resp;
+        //console.log(this.articulos)
+
         if(resp.length>0){
           this.isResultsLoading = false
         }

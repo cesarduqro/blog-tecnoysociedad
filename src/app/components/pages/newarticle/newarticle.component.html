@@ -1,0 +1,69 @@
+<app-sidenav></app-sidenav>
+<div class="m-0 p-4">
+  <div class="row text-end pb-5">
+    <div class="col d-flex justify-content-center align-items-center flex-column">
+      <h2 class="card-title text-start py-3">Crear Articulo</h2>
+      <form class="w-50">
+        <button class="btn btn-outline-danger" [routerLink]="['/articulos']">
+          <i class="fa fa-arrow-left"></i>
+          Volver
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="row animated fadeIn faster">
+    <div class="col d-flex justify-content-center align-items-center flex-column">
+      <form autocomplete="off" class="w-50" (ngSubmit)="guardarArticulo()" [formGroup]="formArticulo">
+        <div class="mb-3">
+          <label class="form-label">Firebase ID</label>
+          <input class="form-control"
+                 type="number"
+                 formControlName="idx"
+                 placeholder="5"
+                [class.is-invalid]="idxNoValido">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Titulo del articulo:</label>
+          <input class="form-control"
+                 type="text"
+                 formControlName="titulo"
+                placeholder="ex: Qué es Typescript"
+                 [class.is-invalid]="tituloNoValido">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Imagen:</label>
+          <input class="form-control"
+                 type="text"
+                 formControlName="image"
+                 placeholder="URL de la imagen">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Resumen:</label>
+          <input class="form-control"
+                 type="text"
+                 formControlName="resumen"
+                 [class.is-invalid]="resumenNoValido"
+                  placeholder="ex: Es un lenguaje transpilador de javascript...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Descripcion:</label>
+          <textarea class="form-control"
+                    [class.is-invalid]="descripcionNoValido"
+                    placeholder="Breve descripcion del articulo"
+                    formControlName="descripcion">
+
+          </textarea>
+        </div>
+        <br>
+        <hr>
+        <div class="mb-3 text-end">
+          <button class="btn btn-warning">
+            <i class="fa fa-save"></i>
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
