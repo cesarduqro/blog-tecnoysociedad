@@ -7,11 +7,16 @@ import {map} from 'rxjs/operators';
 export class ArticulosServices {
   private _url = 'https://blog-tecnoysociedad-default-rtdb.firebaseio.com'
 
-  articulos: Articulos[] = [];
+  articulos : ArticuloModel[] = [];
 
   constructor(private http: HttpClient) {
     console.log('Servicio listo');
+    //this.getArticles();
     this.getArticles()
+      .subscribe(
+        (resp:any) =>{
+          this.articulos = resp;
+        });;
   }
 
   getArticles(){
@@ -27,16 +32,13 @@ export class ArticulosServices {
   }
 
   private crearArreglo( articulosObj: object){
-    const articulos : ArticuloModel[] = [];
-
+    this.articulos = []
     Object.keys( articulosObj ).forEach(key =>{
       const articulo: ArticuloModel = articulosObj[key];
       articulo.idx = key;
-
-      articulos.push(articulo);
-
+      this.articulos.push(articulo);
     });
-    return articulos
+    return this.articulos
   }
 
   getArticle(idx: string) {
@@ -45,15 +47,17 @@ export class ArticulosServices {
   }
 
   searchArticulos(termino:string){
-    let articulosArr: Articulos[] = [];
+    //console.log(this.articulos)
+
+    let articulosArr: ArticuloModel[] = [];
     termino = termino.toLowerCase()
-    /*for (let articulo of this.articulos){
+    for (let articulo of this.articulos){
       let nombre = articulo.titulo.toLowerCase()
       if (nombre.indexOf(termino) >=0){
         articulosArr.push(articulo)
       }
-    }*/
-    for (let i = 0; i< this.articulos.length; i++){
+    }
+    /*for (let i = 0; i< this.articulos.length; i++){
       let articulo = this.articulos[i]
 
       let nombre = articulo.titulo.toLowerCase()
@@ -62,7 +66,7 @@ export class ArticulosServices {
         articulo.idx = i;
         articulosArr.push(articulo)
       }
-    }
+    }*/
     return articulosArr;
   }
 

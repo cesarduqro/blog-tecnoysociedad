@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Articulos} from '../../services/articulos.services';
 import {Router} from '@angular/router';
+import {AuthServices} from '../../services/auth.services';
 
 @Component({
   selector: 'app-sidenav',
@@ -10,13 +11,19 @@ import {Router} from '@angular/router';
 export class SidenavComponent implements OnInit {
   titulo: string;
   buscarTexto: string ;
+  isLoginIn = false;
+  email: string = this.servicioLogin.getLoginInfo();
+  isArticleSite = false;
+  constructor(private router:Router, private servicioLogin: AuthServices) {
+    this.titulo = "Blog T&S"
+    this.isLoginIn = servicioLogin.estaAutenticado();
 
-  constructor(private router:Router) {
-    this.titulo = "Blog"
   }
 
   ngOnInit(): void {
-
+    if (this.router.url === '/articulos'){
+      this.isArticleSite = true;
+    }
   }
 
   buscarArticulo(termino:string){

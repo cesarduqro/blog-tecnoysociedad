@@ -34,8 +34,12 @@ export class AuthServices {
     );
   }
 
+  getLoginInfo(){
+    return localStorage.getItem('email');
+  }
+
   logoutUser(){
-    localStorage.removeItem('token')
+    localStorage.removeItem('token');
   }
 
   private guardarToken(idToken: string) {
