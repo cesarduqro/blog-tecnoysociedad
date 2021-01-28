@@ -17,30 +17,28 @@
         <div class="mb-3">
           <label class="form-label">Firebase ID</label>
           <input class="form-control"
-                 type="number"
                  formControlName="idx"
                  placeholder="5"
                 [class.is-invalid]="idxNoValido">
+          <small class="text-danger" *ngIf="idxNoValido">Ingrese el ID</small>
         </div>
         <div class="mb-3">
           <label class="form-label">Titulo del articulo:</label>
           <input class="form-control"
-                 type="text"
                  formControlName="titulo"
                 placeholder="ex: Qué es Typescript"
                  [class.is-invalid]="tituloNoValido">
+          <small class="text-danger" *ngIf="tituloNoValido">Ingrese el titulo (Min: 10 caracteres)</small>
         </div>
         <div class="mb-3">
           <label class="form-label">Imagen:</label>
           <input class="form-control"
-                 type="text"
                  formControlName="image"
                  placeholder="URL de la imagen">
         </div>
         <div class="mb-3">
           <label class="form-label">Resumen:</label>
           <input class="form-control"
-                 type="text"
                  formControlName="resumen"
                  [class.is-invalid]="resumenNoValido"
                   placeholder="ex: Es un lenguaje transpilador de javascript...">
