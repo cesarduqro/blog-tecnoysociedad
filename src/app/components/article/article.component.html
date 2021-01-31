@@ -1,6 +1,13 @@
 <div class="container p-5">
+
+  <!--  Loading shade -->
+  <div class="d-flex justify-content-center" *ngIf="isResultsLoading" style="height: 600px">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
   <!-- Articulo-->
-  <div class="card">
+  <div class="card animated fadeIn">
     <div class="row text-start">
       <div class="col d-flex justify-content-center align-items-center flex-column">
         <form class="w-100 p-3">

@@ -11,6 +11,7 @@ export class ArticleComponent {
 
   articulo: ArticuloModel = new ArticuloModel();
   id:string;
+  isResultsLoading: any = true;
 
   constructor(private activatedRoute: ActivatedRoute,
               private _services: ArticulosServices,
@@ -35,6 +36,7 @@ export class ArticleComponent {
         //console.log(resp)
         this.id = resp.idx
         this.articulo = resp
+        this.isResultsLoading = false;
       });
   }
 }

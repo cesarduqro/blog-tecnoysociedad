@@ -10,7 +10,7 @@
     </div>
   </div>
   <!--  Loading shade -->
-  <div class="d-flex justify-content-center" *ngIf="isResultsLoading">
+  <div class="d-flex justify-content-center" *ngIf="isResultsLoading" style="height: 600px">
     <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
@@ -19,7 +19,7 @@
   <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
     <!--  Card  -->
     <div class="col" *ngFor="let articulo of articulos.reverse(); let i=index">
-      <div class="card h-100">
+      <div class="card h-100 animated fadeIn">
         <img src="{{articulo.image}}" class="card-img-top" alt="{{articulo.titulo}}">
         <div class="card-body">
           <h5 class="card-title">{{articulo.titulo}}</h5>
