@@ -15,20 +15,24 @@ export class ArticlesComponent implements AfterViewInit {
 
   constructor(public _servicios: ArticulosServices) {
     this.titulo = 'Articulos Recientes';
+    this.loadArticles();
   }
 
   ngAfterViewInit() {
+
+  }
+
+  loadArticles(){
     this._servicios.getArticles()
       .subscribe(
-      (resp:any) =>{
-        this.articulos = resp;
-        //console.log(this.articulos)
+        (resp:any) =>{
+          this.articulos = resp;
+          //console.log(this.articulos)
 
-        if(resp.length>0){
-          this.isResultsLoading = false
-        }
-      });;
-
+          if(resp.length>0){
+            this.isResultsLoading = false
+          }
+        });
   }
 
 }

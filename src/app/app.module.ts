@@ -20,9 +20,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './components/pages/login/login.component';
 import {BusquedaComponent} from './components/articles/busqueda/busqueda.component';
 import {ArticlesComponent} from './components/articles/articles.component';
-import {ArticleComponent} from './components/articles/article/article.component';
 import {HomeComponent} from './components/pages/home/home.component';
 import { NewarticleComponent } from './components/pages/newarticle/newarticle.component';
+import {ArticleComponent} from './components/article/article.component';
+import {AuthServices} from './services/auth.services';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,9 @@ import { NewarticleComponent } from './components/pages/newarticle/newarticle.co
     HomeComponent,
     FooterComponent,
     ArticlesComponent,
-    ArticleComponent,
     AboutComponent,
     BusquedaComponent,
+    ArticleComponent,
     LoginComponent,
     NewarticleComponent,
   ],
@@ -47,8 +48,7 @@ import { NewarticleComponent } from './components/pages/newarticle/newarticle.co
         ReactiveFormsModule,
 
     ],
-  providers: [ ArticulosServices],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  providers: [ ArticulosServices, AuthServices],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
