@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img [src]="https://firebasestorage.googleapis.com/v0/b/blog-tecnoysociedad.appspot.com/o/images%2Facerca_de.png?alt=media&token=ad5f52a1-406f-4b88-8352-851d9c194974" alt="" width="30" height="30" class="d-inline-block align-top">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/blog-tecnoysociedad.appspot.com/o/images%2Fbanner-ico.png?alt=media&token=93782217-a25f-40fa-b268-810a60451643"
+        alt="" width="30" height="30" class="d-inline-block align-top">
       {{titulo}}
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -27,7 +29,8 @@
         </button>
       </form>
       <li class="nav-item dropdown" *ngIf="isLoginIn">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+           aria-expanded="false">
           {{email}}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
