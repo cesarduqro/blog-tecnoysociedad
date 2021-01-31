@@ -14,7 +14,7 @@ export class BusquedaComponent implements OnInit {
   termino:string;
 
   constructor(private activatedRoute:ActivatedRoute, private _services:ArticulosServices) {
-    this.titulo = "Busqueda relacionada"
+    this.titulo = "Busqueda relacionada: "+this.termino;
   }
 
   ngOnInit(): void {
