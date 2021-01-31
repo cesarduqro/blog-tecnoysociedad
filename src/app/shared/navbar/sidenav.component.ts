@@ -21,7 +21,7 @@ export class SidenavComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.router.url === '/articulos'){
+    if (this.router.url === '/articles'){
       this.isArticleSite = true;
     }
   }
