@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,14 @@ export class HomeComponent implements OnInit {
   titulo_header: string;
   descripcion_header: string;
 
-  constructor() {
+  constructor(private router:Router) {
     this.titulo_header = "Ciencia, Tecnología y Sociedad"
     this.descripcion_header = "Blog informativo"
   }
-
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+      this.router.navigate([uri]));
+  }
   ngOnInit(): void {
   }
 

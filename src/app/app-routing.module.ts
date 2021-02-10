@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent,},
   {path: 'about', component: AboutComponent,},
   {path: 'home', component: HomeComponent,},
-  {path: 'articles', component: ArticlesComponent},
-  {path: 'articulo/:id', component: ArticleComponent},
+  {path: 'articulos', component: ArticlesComponent},
+  {path: 'articulos/:id', component: ArticleComponent},
   {path: 'buscar/:termino', component: BusquedaComponent,},
   {path: 'crear-articulo', component: NewarticleComponent, canActivate: [AuthGuard]},
   {path: '**', pathMatch: 'full', redirectTo: 'home' }

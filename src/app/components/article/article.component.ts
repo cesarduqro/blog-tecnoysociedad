@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ArticulosServices} from '../../services/articulos.services';
 import {ArticuloModel} from '../../models/articulo.model';
@@ -7,7 +7,7 @@ import {ArticuloModel} from '../../models/articulo.model';
   selector: 'app-article',
   templateUrl: './article.component.html'
 })
-export class ArticleComponent {
+export class ArticleComponent implements OnInit{
 
   articulo: ArticuloModel = new ArticuloModel();
   id:string;
@@ -17,6 +17,10 @@ export class ArticleComponent {
               private _services: ArticulosServices,
               private router:Router) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
+
+  ngOnInit(){
+    console.log('ENTRO AL NG ON INIT');
     this.activatedRoute.params.subscribe(
       params => {
         this.getArticle( params['id']);
@@ -29,6 +33,7 @@ export class ArticleComponent {
   }
 
   getArticle(id: string) {
+    console.log('OBTENER ARTICULO');
     console.log(id);
     this._services.getArticle(id).subscribe(
       (resp:any) =>{
