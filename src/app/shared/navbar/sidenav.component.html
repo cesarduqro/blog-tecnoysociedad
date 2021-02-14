@@ -3,39 +3,74 @@
     <a class="navbar-brand" href="#">
       <img
         src="https://firebasestorage.googleapis.com/v0/b/blog-tecnoysociedad.appspot.com/o/images%2Fbanner-ico.png?alt=media&token=93782217-a25f-40fa-b268-810a60451643"
-        alt="" width="30" height="30" class="d-inline-block align-top">
-      {{titulo}}
+        alt=""
+        width="30"
+        height="30"
+        class="d-inline-block align-top"
+      />
+      {{ titulo }}
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active">Inicio</a>
+          <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active"
+            >Inicio</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/articulos'" routerLinkActive="active">Articulos</a>
+          <a
+            class="nav-link"
+            [routerLink]="'/articulos'"
+            routerLinkActive="active"
+            >Articulos</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active">Acerca de</a>
+          <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active"
+            >Acerca de</a
+          >
         </li>
       </ul>
       <form class="d-flex" *ngIf="isArticleSite">
-        <input class="form-control me-2" type="search" placeholder="Buscar articulo..."
-               (keyup.enter)="buscarArticulo(buscarTexto.value)" #buscarTexto>
-        <button class="btn btn-outline-warning" type="button" (click)="buscarArticulo(buscarTexto.value)">Buscar
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar articulo..."
+          (keyup.enter)="buscarArticulo(buscarTexto.value)"
+          #buscarTexto
+        />
+        <button
+          class="btn btn-outline-warning"
+          type="button"
+          (click)="buscarArticulo(buscarTexto.value)"
+        >
+          Buscar
         </button>
       </form>
       <li class="nav-item dropdown" *ngIf="isLoginIn">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-           aria-expanded="false">
-          {{email}}
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          {{ email }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <li>
-            <a class="dropdown-item" >Cerrar Sesion</a>
+            <a class="dropdown-item">Cerrar Sesion</a>
           </li>
         </ul>
       </li>

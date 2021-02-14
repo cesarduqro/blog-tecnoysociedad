@@ -1,7 +1,10 @@
 <div class="container p-5">
-
   <!--  Loading shade -->
-  <div class="d-flex justify-content-center" *ngIf="isResultsLoading" style="height: 600px">
+  <div
+    class="d-flex justify-content-center"
+    *ngIf="isResultsLoading"
+    style="height: 600px"
+  >
     <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
@@ -9,9 +12,14 @@
   <!-- Articulo-->
   <div class="card animated fadeIn">
     <div class="row text-start">
-      <div class="col d-flex justify-content-center align-items-center flex-column">
+      <div
+        class="col d-flex justify-content-center align-items-center flex-column"
+      >
         <form class="w-100 p-3">
-          <button class="btn btn-outline-danger" (click)="redirectTo('articulos')">
+          <button
+            class="btn btn-outline-danger"
+            (click)="redirectTo('articulos')"
+          >
             <i class="fa fa-arrow-left"></i>
             Volver
           </button>
@@ -20,28 +28,25 @@
     </div>
     <div class="row g-0 p-4">
       <div class="col-md-4">
-        <img src="{{articulo.image}}" class="card-img-top" alt="...">
+        <img src="{{ articulo.image }}" class="card-img-top" alt="..." />
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h2 class="card-title">{{articulo.titulo}}</h2>
-          <p class="card-text">{{articulo.resumen}} </p>
-          <p>{{articulo.descripcion}}</p>
+          <h2 class="card-title">{{ articulo.titulo }}</h2>
+          <p class="card-text">{{ articulo.resumen }}</p>
+          <p>{{ articulo.descripcion }}</p>
         </div>
       </div>
       <!-- caso 0-->
-      <div class="container mt-4" *ngIf="id=='0'">
+      <div class="container mt-4" *ngIf="id == '0'">
         <h3 class="card-title">Componentes de la ciencia</h3>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="card h-100 border-primary">
               <div class="card-body">
-                <p class="card-text">Representado por
-                  los científicos y por
-                  todo el personal
-                  que colabora con
-                  los fines de la
-                  actividad científica.
+                <p class="card-text">
+                  Representado por los científicos y por todo el personal que
+                  colabora con los fines de la actividad científica.
                 </p>
               </div>
             </div>
@@ -49,31 +54,21 @@
           <div class="col">
             <div class="card h-100 border-success">
               <div class="card-body">
-                <p class="card-text">Conjunto de
-                  relaciones que, en
-                  el marco del
-                  trabajo, relaciones
-                  entre las
-                  sociedades, los
-                  grupos y equipos
-                  de trabajo,
-                  universidades, etc.</p>
+                <p class="card-text">
+                  Conjunto de relaciones que, en el marco del trabajo,
+                  relaciones entre las sociedades, los grupos y equipos de
+                  trabajo, universidades, etc.
+                </p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100 border-warning">
               <div class="card-body">
-                <p class="card-text">Comprende
-                  procesos para
-                  generar los
-                  conocimientos
-                  teóricos,
-                  metodológicos,
-                  prácticos u otros se
-                  manifiesta por
-                  medios formales e
-                  informales.
+                <p class="card-text">
+                  Comprende procesos para generar los conocimientos teóricos,
+                  metodológicos, prácticos u otros se manifiesta por medios
+                  formales e informales.
                 </p>
               </div>
             </div>
@@ -81,16 +76,10 @@
           <div class="col">
             <div class="card h-100 border-info">
               <div class="card-body">
-                <p class="card-text">Comprende
-                  instrumentos,
-                  equipos u otros
-                  elementos que
-                  constituyen
-                  herramientas que
-                  los científicos
-                  utilizan en el marco
-                  del desarrollo la de
-                  actividad científica.
+                <p class="card-text">
+                  Comprende instrumentos, equipos u otros elementos que
+                  constituyen herramientas que los científicos utilizan en el
+                  marco del desarrollo la de actividad científica.
                 </p>
               </div>
             </div>
@@ -98,15 +87,18 @@
         </div>
       </div>
       <!-- caso 1 -->
-      <div class="container mt-4" *ngIf="id=='1'">
+      <div class="container mt-4" *ngIf="id == '1'">
         <h3 class="card-title">Términos</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
           <div class="col">
             <div class="card h-100 border-primary">
               <div class="card-body">
-                <p class="card-text">La Tecnología aplicada de forma lógica y ordenada, permiten al individuo cambiar su
-                  entorno material o virtual para satisfacer sus necesidades, esto es, un proceso combinado
-                  de pensamiento y acción con la finalidad de crear soluciones útiles.
+                <p class="card-text">
+                  La Tecnología aplicada de forma lógica y ordenada, permiten al
+                  individuo cambiar su entorno material o virtual para
+                  satisfacer sus necesidades, esto es, un proceso combinado de
+                  pensamiento y acción con la finalidad de crear soluciones
+                  útiles.
                 </p>
               </div>
             </div>
@@ -114,33 +106,36 @@
           <div class="col">
             <div class="card h-100 border-success">
               <div class="card-body">
-                <p class="card-text">Una aplicabilidad de ese conocimiento a las
-                  actividades humanas o saber hacer.</p>
+                <p class="card-text">
+                  Una aplicabilidad de ese conocimiento a las actividades
+                  humanas o saber hacer.
+                </p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100 border-warning">
               <div class="card-body">
-                <p class="card-text">Una finalidad utilitaria, conducente a obtener
-                  resultados o saber hacer cosas útiles.
+                <p class="card-text">
+                  Una finalidad utilitaria, conducente a obtener resultados o
+                  saber hacer cosas útiles.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <!-- caso 2-->
-      <div class="container mt-4" *ngIf="id=='2'">
+      <div class="container mt-4" *ngIf="id == '2'">
         <h3 class="card-title">Características</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card h-100 border-primary">
               <div class="card-body">
-                <p class="card-text">La sociedad actual es una sociedad que vive inmersa en un mundo donde
-                  prácticamente todo lo que nos rodea es de alguna manera un producto de la
-                  ciencia y la tecnología.
+                <p class="card-text">
+                  La sociedad actual es una sociedad que vive inmersa en un
+                  mundo donde prácticamente todo lo que nos rodea es de alguna
+                  manera un producto de la ciencia y la tecnología.
                 </p>
               </div>
             </div>
@@ -148,8 +143,10 @@
           <div class="col">
             <div class="card h-100 border-warning">
               <div class="card-body">
-                <p class="card-text">Se da un fenómeno hoy en la sociedad que esta presente en todo contexto: el
-                  riesgo. Asociados con el uso de artefactos tecnocientíficos.
+                <p class="card-text">
+                  Se da un fenómeno hoy en la sociedad que esta presente en todo
+                  contexto: el riesgo. Asociados con el uso de artefactos
+                  tecnocientíficos.
                 </p>
               </div>
             </div>
@@ -157,28 +154,35 @@
           <div class="col">
             <div class="card h-100 border-success">
               <div class="card-body">
-                <p class="card-text">Tal situación, y la magnitud y naturaleza de los riesgos que hoy debemos
-                  afrontar, hace necesario el desarrollo de nuevos enfoques éticos como el
-                  “principio de responsabilidad”.</p>
+                <p class="card-text">
+                  Tal situación, y la magnitud y naturaleza de los riesgos que
+                  hoy debemos afrontar, hace necesario el desarrollo de nuevos
+                  enfoques éticos como el “principio de responsabilidad”.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- caso 3-->
-      <div class="container mt-4" *ngIf="id=='3'">
+      <div class="container mt-4" *ngIf="id == '3'">
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
-            <h4 class="card-subtitle">¿A qué da respuesta la Ciencia, Tecnología y Sociedad (CTS) desde el punto de
-              vista de la
-              Organización de Estados Iberoamericanos (OEI)?</h4>
-            <br>
-            <p>La concepción clásica de la relación entre ciencia y tecnología con la sociedad es una
-              concepción esencial y triunfalista que se puede resumir en una simple ecuación, el llamado
-              "modelo de desarrollo lineal": Ciencia =+ Tecnología =+ riqueza =+ bienestar social.
-              Esta vista es común en diferentes estancias de la ciencia y los medios. Aplicando el método
-              científico y cumpliendo con un código de responsabilidad profesional, se espera que la
-              ciencia produzca la acumulación de conocimiento objetivo sobre el mundo.
+            <h4 class="card-subtitle">
+              ¿A qué da respuesta la Ciencia, Tecnología y Sociedad (CTS) desde
+              el punto de vista de la Organización de Estados Iberoamericanos
+              (OEI)?
+            </h4>
+            <br />
+            <p>
+              La concepción clásica de la relación entre ciencia y tecnología
+              con la sociedad es una concepción esencial y triunfalista que se
+              puede resumir en una simple ecuación, el llamado "modelo de
+              desarrollo lineal": Ciencia =+ Tecnología =+ riqueza =+ bienestar
+              social. Esta vista es común en diferentes estancias de la ciencia
+              y los medios. Aplicando el método científico y cumpliendo con un
+              código de responsabilidad profesional, se espera que la ciencia
+              produzca la acumulación de conocimiento objetivo sobre el mundo.
             </p>
           </div>
         </div>
@@ -189,34 +193,40 @@
               <div class="card-body">
                 <table class="table">
                   <thead>
-                  <tr>
-                    <th scope="col">Tema</th>
-                    <th scope="col">Diferencia</th>
-                  </tr>
+                    <tr>
+                      <th scope="col">Tema</th>
+                      <th scope="col">Diferencia</th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Por su antigüedad</td>
-                    <td>La ciencia, es un método de observación del mundo ya que permite a través de ella lograr los
-                      descubrimientos trazados desde los tiempos antiguos.
-                      La tecnología, tiene su origen empezando desde el desarrollo de las técnicas y saberes científicos
-                      del
-                      ser humano.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Nivel de autonomía</td>
-                    <td> La ciencia es autónoma ya que persigue sus propios rumbos y no requiere en principio de la
-                      tecnología para proseguir su camino. La tecnología, sin embargo, es muy dependiente de las otras
-                      ciencias para obtener dicho resultado.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Su metodología</td>
-                    <td> La ciencia normalmente se desarrolla en un plano teórico, de análisis y deducción, en cuanto a
-                      la tecnología, es mucho más práctica.
-                    </td>
-                  </tr>
+                    <tr>
+                      <td>Por su antigüedad</td>
+                      <td>
+                        La ciencia, es un método de observación del mundo ya que
+                        permite a través de ella lograr los descubrimientos
+                        trazados desde los tiempos antiguos. La tecnología,
+                        tiene su origen empezando desde el desarrollo de las
+                        técnicas y saberes científicos del ser humano.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nivel de autonomía</td>
+                      <td>
+                        La ciencia es autónoma ya que persigue sus propios
+                        rumbos y no requiere en principio de la tecnología para
+                        proseguir su camino. La tecnología, sin embargo, es muy
+                        dependiente de las otras ciencias para obtener dicho
+                        resultado.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Su metodología</td>
+                      <td>
+                        La ciencia normalmente se desarrolla en un plano
+                        teórico, de análisis y deducción, en cuanto a la
+                        tecnología, es mucho más práctica.
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -225,121 +235,156 @@
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">Diferencia entre la técnica y la tecnología.</h4>
-            <br>
-            <p>La tecnología es el medio que utilizamos para alcanzar un objetivo, mientras que la técnica es el
-              proceso que aplicamos a la tecnología para poder alcanzarla.
+            <h4 class="card-subtitle">
+              Diferencia entre la técnica y la tecnología.
+            </h4>
+            <br />
+            <p>
+              La tecnología es el medio que utilizamos para alcanzar un
+              objetivo, mientras que la técnica es el proceso que aplicamos a la
+              tecnología para poder alcanzarla.
             </p>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">¿Por qué unas tecnologías levantan grandes polémicas sociales, mientras que otras
-              se
-              adoptan masivamente sin más? </h4>
-            <br>
-            <p>Esto ocurre debido al origen del estudio de ese desarrollo tecnológico, el cual podría ser a través
-              de la experimentación con seres vivos en caso de ser en el ámbito médico o a través de
-              experimentación en localidades físicas secretas tal como la invención de la bomba atómica que
-              provocó miles de millones de muertes y contaminación ambiental a gran escala. En cambio
-              nuevas tecnologías como herramientas con mayor duración de usabilidad o resistencia, que ha
-              sido un gran aporte en el ámbito industrial y agricultor.
+            <h4 class="card-subtitle">
+              ¿Por qué unas tecnologías levantan grandes polémicas sociales,
+              mientras que otras se adoptan masivamente sin más?
+            </h4>
+            <br />
+            <p>
+              Esto ocurre debido al origen del estudio de ese desarrollo
+              tecnológico, el cual podría ser a través de la experimentación con
+              seres vivos en caso de ser en el ámbito médico o a través de
+              experimentación en localidades físicas secretas tal como la
+              invención de la bomba atómica que provocó miles de millones de
+              muertes y contaminación ambiental a gran escala. En cambio nuevas
+              tecnologías como herramientas con mayor duración de usabilidad o
+              resistencia, que ha sido un gran aporte en el ámbito industrial y
+              agricultor.
             </p>
           </div>
         </div>
       </div>
       <!-- caso 4-->
-      <div class="container mt-4" *ngIf="id=='4'">
+      <div class="container mt-4" *ngIf="id == '4'">
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
-            <h4 class="card-subtitle">¿Cuál es el objetivo del trabajo ingenieril?</h4>
-            <br>
-            <p>El objetivo primordial del trabajo ingenieril es de realizar diseños o proporcionar
-              soluciones tecnológicas a todas las necesidades sociales, industriales o económicas. Para
-              ello debe identificar y comprender los problemas más importantes para poder realizar un
-              diseño eficiente. Conocer los principios que son fundamentales detrás de la acción y
-              desempeño humano que tienen una mayor relevancia para el desarrollo de principios
-              ingenieriles de diseño.
+            <h4 class="card-subtitle">
+              ¿Cuál es el objetivo del trabajo ingenieril?
+            </h4>
+            <br />
+            <p>
+              El objetivo primordial del trabajo ingenieril es de realizar
+              diseños o proporcionar soluciones tecnológicas a todas las
+              necesidades sociales, industriales o económicas. Para ello debe
+              identificar y comprender los problemas más importantes para poder
+              realizar un diseño eficiente. Conocer los principios que son
+              fundamentales detrás de la acción y desempeño humano que tienen
+              una mayor relevancia para el desarrollo de principios ingenieriles
+              de diseño.
             </p>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
             <h4 class="card-subtitle">¿Cuál es la esencia de la ingeniería?</h4>
-            <br>
-            <p>Las diversas ramas que tiene la Ingeniería poseen distintos orígenes y objetivos particulares,
-              que presentan un grado distinto de contacto con la naturaleza y sus leyes. En estos últimos
-              años la incidencia de la tecnología ha sido de gran importancia en la influencia de los
-              métodos y técnicas sistematizados en todas las actividades humanas que hace de las
-              funciones (y sus características) la suficiente nitidez de la Ingeniería respecto a otras
-              profesiones.
+            <br />
+            <p>
+              Las diversas ramas que tiene la Ingeniería poseen distintos
+              orígenes y objetivos particulares, que presentan un grado distinto
+              de contacto con la naturaleza y sus leyes. En estos últimos años
+              la incidencia de la tecnología ha sido de gran importancia en la
+              influencia de los métodos y técnicas sistematizados en todas las
+              actividades humanas que hace de las funciones (y sus
+              características) la suficiente nitidez de la Ingeniería respecto a
+              otras profesiones.
             </p>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">¿Cuáles son las denominaciones básicas para la ingeniería en el Ecuador?
-              <br>¿En la Universidad ECOTEC?</h4>
-            <br>
-            <p>La ingeniería es un campo amplio que se divide en varias disciplinas y subdisciplinas. Las
-              disciplinas de la ingeniería se pueden dividir en cuatro categorías principales: química,
-              ingeniería civil, ingeniería eléctrica e ingeniería mecánica. Cada disciplina principal le da una
-              "muestra" de las diversas habilidades y conocimientos necesarios para trabajar en un campo
+            <h4 class="card-subtitle">
+              ¿Cuáles son las denominaciones básicas para la ingeniería en el
+              Ecuador? <br />¿En la Universidad ECOTEC?
+            </h4>
+            <br />
+            <p>
+              La ingeniería es un campo amplio que se divide en varias
+              disciplinas y subdisciplinas. Las disciplinas de la ingeniería se
+              pueden dividir en cuatro categorías principales: química,
+              ingeniería civil, ingeniería eléctrica e ingeniería mecánica. Cada
+              disciplina principal le da una "muestra" de las diversas
+              habilidades y conocimientos necesarios para trabajar en un campo
               relacionado con la disciplina.
             </p>
-            <p>En la Universidad Ecotec encontramos las siguientes categorías: Ingeniería Industrial,
-              Ingeniería en Software, Ingeniería en TI, Ingeniería en Agronomía. También están las áreas
-              de estudio mas centralizadas en la Física y las Matemáticas para el estudio de la geografía
-              de la tierra como lo es la Geofísica.
+            <p>
+              En la Universidad Ecotec encontramos las siguientes categorías:
+              Ingeniería Industrial, Ingeniería en Software, Ingeniería en TI,
+              Ingeniería en Agronomía. También están las áreas de estudio mas
+              centralizadas en la Física y las Matemáticas para el estudio de la
+              geografía de la tierra como lo es la Geofísica.
             </p>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">¿Cuál es la utilidad de la Ingeniería al campo de la ciencia, la tecnología y la
-              sociedad? </h4>
-            <br>
-            <p>La Ingeniería, la aplicación de la ciencia a la óptima conversión de los recursos de la
-              naturaleza a los usos de la humanidad. El campo ha sido definido por el Engineers Council
-              for Professional Development, en los Estados Unidos, como la aplicación creativa de
-              “principios científicos para diseñar o desarrollar estructuras, máquinas, aparatos o procesos
-              de fabricación, o trabajos que los utilicen individualmente o en combinación; o para
-              construir u operar el mismo con pleno conocimiento de su diseño; o pronosticar su
-              comportamiento en condiciones operativas específicas; todo en lo que respecta a la función
-              prevista, la economía de funcionamiento y la seguridad de la vida y la propiedad ".
+            <h4 class="card-subtitle">
+              ¿Cuál es la utilidad de la Ingeniería al campo de la ciencia, la
+              tecnología y la sociedad?
+            </h4>
+            <br />
+            <p>
+              La Ingeniería, la aplicación de la ciencia a la óptima conversión
+              de los recursos de la naturaleza a los usos de la humanidad. El
+              campo ha sido definido por el Engineers Council for Professional
+              Development, en los Estados Unidos, como la aplicación creativa de
+              “principios científicos para diseñar o desarrollar estructuras,
+              máquinas, aparatos o procesos de fabricación, o trabajos que los
+              utilicen individualmente o en combinación; o para construir u
+              operar el mismo con pleno conocimiento de su diseño; o pronosticar
+              su comportamiento en condiciones operativas específicas; todo en
+              lo que respecta a la función prevista, la economía de
+              funcionamiento y la seguridad de la vida y la propiedad ".
             </p>
           </div>
         </div>
       </div>
       <!-- caso 5-->
-      <div class="container mt-4" *ngIf="id=='5'">
+      <div class="container mt-4" *ngIf="id == '5'">
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
-              <h4 class="card-title">Elementos que caraterizan a la sociedad esclavista</h4>
+              <h4 class="card-title">
+                Elementos que caraterizan a la sociedad esclavista
+              </h4>
               <div class="card-body">
                 <table class="table">
                   <thead>
-                  <tr>
-                    <th scope="col">Esclavos</th>
-                  </tr>
+                    <tr>
+                      <th scope="col">Esclavos</th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Capturados o prisioneros de guerras</td>
-                  </tr>
-                  <tr>
-                    <td>Mala fortuna de nacer en el núcleo familiar de un esclavo</td>
-                  </tr>
-                  <tr>
-                    <td>Delitos graves por hombres libres</td>
-                  </tr>
-                  <tr>
-                    <td>Contraían deudas</td>
-                  </tr>
-                  <tr>
-                    <td>El esclavo no tiene derecho</td>
-                  </tr>
+                    <tr>
+                      <td>Capturados o prisioneros de guerras</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Mala fortuna de nacer en el núcleo familiar de un
+                        esclavo
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Delitos graves por hombres libres</td>
+                    </tr>
+                    <tr>
+                      <td>Contraían deudas</td>
+                    </tr>
+                    <tr>
+                      <td>El esclavo no tiene derecho</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -348,28 +393,39 @@
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">¿Según la historia, de donde provienen los primeros esclavos?</h4>
-            <br>
-            <p>Los primeros escritos en los cuales hay constancia de la presencia de esclavos es en una gran
-              civilización que es en Mesopotamia, durante la época sumeria y de ahí recorre Persia, Grecia, Egipto y
+            <h4 class="card-subtitle">
+              ¿Según la historia, de donde provienen los primeros esclavos?
+            </h4>
+            <br />
+            <p>
+              Los primeros escritos en los cuales hay constancia de la presencia
+              de esclavos es en una gran civilización que es en Mesopotamia,
+              durante la época sumeria y de ahí recorre Persia, Grecia, Egipto y
               China.
             </p>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">¿Crees que aún es vigente el concepto de “sociedad esclavista”? ¿Se ha dado una
-              adaptación o evolución?</h4>
-            <br>
-            <p>El concepto se ha transformado, puesto que en la actualidad existe mas una sociedad consumista y
-              esclavizada a un sistema en el que el capital esta por encima de todo, incluso de los recursos que
-              aparentemente son nuestros derechos: como la educación, la salud, el agua, los alimentos, etc. Una
-              sociedad esclavista porque depende del dinero para sobrevivir.
+            <h4 class="card-subtitle">
+              ¿Crees que aún es vigente el concepto de “sociedad esclavista”?
+              ¿Se ha dado una adaptación o evolución?
+            </h4>
+            <br />
+            <p>
+              El concepto se ha transformado, puesto que en la actualidad existe
+              mas una sociedad consumista y esclavizada a un sistema en el que
+              el capital esta por encima de todo, incluso de los recursos que
+              aparentemente son nuestros derechos: como la educación, la salud,
+              el agua, los alimentos, etc. Una sociedad esclavista porque
+              depende del dinero para sobrevivir.
             </p>
-            <p>En la Universidad Ecotec encontramos las siguientes categorías: Ingeniería Industrial,
-              Ingeniería en Software, Ingeniería en TI, Ingeniería en Agronomía. También están las áreas
-              de estudio mas centralizadas en la Física y las Matemáticas para el estudio de la geografía
-              de la tierra como lo es la Geofísica.
+            <p>
+              En la Universidad Ecotec encontramos las siguientes categorías:
+              Ingeniería Industrial, Ingeniería en Software, Ingeniería en TI,
+              Ingeniería en Agronomía. También están las áreas de estudio mas
+              centralizadas en la Física y las Matemáticas para el estudio de la
+              geografía de la tierra como lo es la Geofísica.
             </p>
           </div>
         </div>
@@ -379,68 +435,73 @@
             <div class="card-body">
               <table class="table">
                 <thead>
-                <tr>
-                  <th scope="col">Características</th>
-                  <th scope="col">Mesopotamia</th>
-                  <th scope="col">Egipto</th>
-                  <th scope="col">India</th>
-                  <th scope="col">China</th>
-                </tr>
+                  <tr>
+                    <th scope="col">Características</th>
+                    <th scope="col">Mesopotamia</th>
+                    <th scope="col">Egipto</th>
+                    <th scope="col">India</th>
+                    <th scope="col">China</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Periodo tecnológico</td>
-                  <td>Entre 200 y 100 a.c</td>
-                  <td>3000 a.c</td>
-                  <td>Hace 2000 años</td>
-                  <td>618 - 906</td>
-                </tr>
-                <tr>
-                  <td>Época histórica</td>
-                  <td>Durante los milenios IV y III</td>
-                  <td>31 a.c</td>
-                  <td>Periodo Brahmánico</td>
-                  <td>1600 a.c - 221 a.c</td>
-                </tr>
-                <tr>
-                  <td>Fuente de energía</td>
-                  <td>fuego</td>
-                  <td>fuego</td>
-                  <td>agua</td>
-                  <td>carbon</td>
-                </tr>
-                <tr>
-                  <td>Estructura social</td>
-                  <td>Rey Grupo Dirigente sacerdotes, guerreros, comerciantes Personas libres: campesinos, mercaderes,
-                    artesanos Esclavos
-                  </td>
-                  <td>Faraón familia real Nobles, funcionario s, militares y escribas Campesinos, artesanos y
-                    comerciantes
-                    Esclavos
-                  </td>
-                  <td>Brahmin,kshatriya,
-                    Vaishya,shudra,harijan
-                  </td>
-                  <td>Emperador, aristocracia, mandarines, campesinos,esclavos</td>
-                </tr>
-                <tr>
-                  <td>Tecnología incorporada</td>
-                  <td>Herramientas para agricultura y ganadería</td>
-                  <td>Creadores de las pirámides y los sarcófagos, monumentos enormes con mecanismos muy avanzados para
-                    su epoca
-                  </td>
-                  <td>Casas modulares, juegos como el ajedrez, los números de la sucesión de Fibonacci</td>
-                  <td>El papel, la pólvora, la imprenta</td>
-                </tr>
+                  <tr>
+                    <td>Periodo tecnológico</td>
+                    <td>Entre 200 y 100 a.c</td>
+                    <td>3000 a.c</td>
+                    <td>Hace 2000 años</td>
+                    <td>618 - 906</td>
+                  </tr>
+                  <tr>
+                    <td>Época histórica</td>
+                    <td>Durante los milenios IV y III</td>
+                    <td>31 a.c</td>
+                    <td>Periodo Brahmánico</td>
+                    <td>1600 a.c - 221 a.c</td>
+                  </tr>
+                  <tr>
+                    <td>Fuente de energía</td>
+                    <td>fuego</td>
+                    <td>fuego</td>
+                    <td>agua</td>
+                    <td>carbon</td>
+                  </tr>
+                  <tr>
+                    <td>Estructura social</td>
+                    <td>
+                      Rey Grupo Dirigente sacerdotes, guerreros, comerciantes
+                      Personas libres: campesinos, mercaderes, artesanos
+                      Esclavos
+                    </td>
+                    <td>
+                      Faraón familia real Nobles, funcionario s, militares y
+                      escribas Campesinos, artesanos y comerciantes Esclavos
+                    </td>
+                    <td>Brahmin,kshatriya, Vaishya,shudra,harijan</td>
+                    <td>
+                      Emperador, aristocracia, mandarines, campesinos,esclavos
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Tecnología incorporada</td>
+                    <td>Herramientas para agricultura y ganadería</td>
+                    <td>
+                      Creadores de las pirámides y los sarcófagos, monumentos
+                      enormes con mecanismos muy avanzados para su epoca
+                    </td>
+                    <td>
+                      Casas modulares, juegos como el ajedrez, los números de la
+                      sucesión de Fibonacci
+                    </td>
+                    <td>El papel, la pólvora, la imprenta</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
-
           </div>
         </div>
       </div>
       <!-- caso 6-->
-      <div class="container mt-4" *ngIf="id=='6'">
+      <div class="container mt-4" *ngIf="id == '6'">
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
@@ -448,33 +509,40 @@
               <div class="card-body">
                 <table class="table">
                   <thead>
-                  <tr>
-                    <th scope="col">Sociedad</th>
-                    <th scope="col">Caracteristica</th>
-                  </tr>
+                    <tr>
+                      <th scope="col">Sociedad</th>
+                      <th scope="col">Caracteristica</th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Sociedad de la información</td>
-                    <td>La sociedad de la información se refiere a la creciente capacidad tecnológica para
-                      almacenar cada vez más información y hacer que se difunda más rápido y con mayor
-                      capacidad de difusión.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sociedad del conocimiento</td>
-                    <td>La sociedad del conocimiento se refiere a la apropiación crítica y selectiva de la
-                      información por parte de los ciudadanos que saben utilizar la información.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sociedad en red</td>
-                    <td>La sociedad red está conformada por una estructura social, compuesta por redes
-                      activadas por tecnologías digitales de la comunicación y la información basadas en la
-                      microelectrónica, es decir, en los procesos que se llegan a aplicar a una secuencia para el
-                      resultado final.
-                    </td>
-                  </tr>
+                    <tr>
+                      <td>Sociedad de la información</td>
+                      <td>
+                        La sociedad de la información se refiere a la creciente
+                        capacidad tecnológica para almacenar cada vez más
+                        información y hacer que se difunda más rápido y con
+                        mayor capacidad de difusión.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sociedad del conocimiento</td>
+                      <td>
+                        La sociedad del conocimiento se refiere a la apropiación
+                        crítica y selectiva de la información por parte de los
+                        ciudadanos que saben utilizar la información.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sociedad en red</td>
+                      <td>
+                        La sociedad red está conformada por una estructura
+                        social, compuesta por redes activadas por tecnologías
+                        digitales de la comunicación y la información basadas en
+                        la microelectrónica, es decir, en los procesos que se
+                        llegan a aplicar a una secuencia para el resultado
+                        final.
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -484,49 +552,67 @@
 
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle"> ¿Cuáles son las maneras o modos de aplicar la filosofía de la “sociedad del
-              conocimiento” en el contexto Latinoamericano?</h4>
-            <br>
-            <p>Actualmente se está discutiendo la situación del post-capitalismo, en el que el conocimiento
-              debe estar ligado a una ética, dejando atrás los intereses individuales para reemplazarlos por
-              intereses colectivos. Desde un punto de vista sociológico, es importante tener en cuenta la huella
-              de las valiosas aportaciones de Manuel Castells en su obra clásica La era de la información.
+            <h4 class="card-subtitle">
+              ¿Cuáles son las maneras o modos de aplicar la filosofía de la
+              “sociedad del conocimiento” en el contexto Latinoamericano?
+            </h4>
+            <br />
+            <p>
+              Actualmente se está discutiendo la situación del post-capitalismo,
+              en el que el conocimiento debe estar ligado a una ética, dejando
+              atrás los intereses individuales para reemplazarlos por intereses
+              colectivos. Desde un punto de vista sociológico, es importante
+              tener en cuenta la huella de las valiosas aportaciones de Manuel
+              Castells en su obra clásica La era de la información.
             </p>
-            <p>Economía, sociedad y cultura en sus tres volúmenes. En este contexto, Manuel Castells sostiene
-              que no hay crisis económica en América Latina, sino también a nivel mundial, sino una crisis del
-              neoliberalismo como causa de la globalización descontrolada y un desarrollo que, en términos de
-              impacto político y social, se dirige hacia los grupos mejor educados. y que la movilidad del capital
-              con sus flujos tecnológicos es imposible de regular a escala global.
+            <p>
+              Economía, sociedad y cultura en sus tres volúmenes. En este
+              contexto, Manuel Castells sostiene que no hay crisis económica en
+              América Latina, sino también a nivel mundial, sino una crisis del
+              neoliberalismo como causa de la globalización descontrolada y un
+              desarrollo que, en términos de impacto político y social, se
+              dirige hacia los grupos mejor educados. y que la movilidad del
+              capital con sus flujos tecnológicos es imposible de regular a
+              escala global.
             </p>
           </div>
         </div>
 
         <div class="row row-cols-1 g-4 py-3">
           <div class="col">
-            <h4 class="card-subtitle">¿Cuáles son los factores que han impedido un crecimiento equilibrado y la
-              expansión de la sociedad del conocimiento en América Latina? </h4>
+            <h4 class="card-subtitle">
+              ¿Cuáles son los factores que han impedido un crecimiento
+              equilibrado y la expansión de la sociedad del conocimiento en
+              América Latina?
+            </h4>
             <div class="card-body">
               <ul class="list-group">
-                <li class="list-group-item">Herramientas mentales como capacidades y habilidades que ayuden al desempeño
-                  personal.
+                <li class="list-group-item">
+                  Herramientas mentales como capacidades y habilidades que
+                  ayuden al desempeño personal.
                 </li>
-                <li class="list-group-item">Contenidos (formas de saber) sintéticos y sistémicos</li>
-                <li class="list-group-item">Exigencia de mayor calidad a nivel empresarial, político, educativo y
-                  social.
+                <li class="list-group-item">
+                  Contenidos (formas de saber) sintéticos y sistémicos
+                </li>
+                <li class="list-group-item">
+                  Exigencia de mayor calidad a nivel empresarial, político,
+                  educativo y social.
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
       <!-- caso 7 -->
-      <div class="container mt-4" *ngIf="id=='7'">
+      <div class="container mt-4" *ngIf="id == '7'">
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
-              <h4 class="card-title">Clasificación y distribución por áreas o campos relacionados con la Investigación y
-                Desarrollo según la nomenclatura planteada por la UNESCO</h4>
+              <h4 class="card-title">
+                Clasificación y distribución por áreas o campos relacionados con
+                la Investigación y Desarrollo según la nomenclatura planteada
+                por la UNESCO
+              </h4>
               <div class="card-body">
                 <ul class="list-group">
                   <li class="list-group-item">LOGICA</li>
@@ -548,7 +634,9 @@
                   <li class="list-group-item">PEDAGOGIA</li>
                   <li class="list-group-item">CIENCIA POLITICA</li>
                   <li class="list-group-item">PSICOLOGIA</li>
-                  <li class="list-group-item">CIENCIAS DE LAS ARTES Y LAS LETRAS</li>
+                  <li class="list-group-item">
+                    CIENCIAS DE LAS ARTES Y LAS LETRAS
+                  </li>
                   <li class="list-group-item">SOCIOLOGIA</li>
                   <li class="list-group-item">ETICA</li>
                 </ul>
@@ -559,142 +647,247 @@
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
-              <h4 class="card-title">¿Cuál papel ha desempeñado en la I+D las tecnologías de información (TI)
-                específicamente a nivel del
-                desarrollo de software?</h4>
+              <h4 class="card-title">
+                ¿Cuál papel ha desempeñado en la I+D las tecnologías de
+                información (TI) específicamente a nivel del desarrollo de
+                software?
+              </h4>
               <div class="card-body">
-                <p>Las TI han sido de gran ayuda y soporte para la creación de proyectos tanto de innovación social como
-                  de desarrollo tecnológico. Entre algunos podemos encontrar:</p>
+                <p>
+                  Las TI han sido de gran ayuda y soporte para la creación de
+                  proyectos tanto de innovación social como de desarrollo
+                  tecnológico. Entre algunos podemos encontrar:
+                </p>
                 <ul class="list-group">
-                  <li class="list-group-item">Haus App – Comunicación entre vecinos de un sector residencial.</li>
-                  <li class="list-group-item">Open green map – Mapa para búsqueda de áreas verdes libres.</li>
-                  <li class="list-group-item">OPTiTRAIN - IntraOcular Lens Neurotraining. Neuroentretenimiento visual en
-                    pacientes operados de cirugía de cataratas e implantados con lente intracular multifocal
+                  <li class="list-group-item">
+                    Haus App – Comunicación entre vecinos de un sector
+                    residencial.
                   </li>
-                  <li class="list-group-item">GYCDRON - Torre de control virtual con información en tiempo real de los
-                    vuelos realizados por RPAS y aeronaves tripuladas
+                  <li class="list-group-item">
+                    Open green map – Mapa para búsqueda de áreas verdes libres.
+                  </li>
+                  <li class="list-group-item">
+                    OPTiTRAIN - IntraOcular Lens Neurotraining.
+                    Neuroentretenimiento visual en pacientes operados de cirugía
+                    de cataratas e implantados con lente intracular multifocal
+                  </li>
+                  <li class="list-group-item">
+                    GYCDRON - Torre de control virtual con información en tiempo
+                    real de los vuelos realizados por RPAS y aeronaves
+                    tripuladas
                   </li>
                 </ul>
-
-
               </div>
-
             </div>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
-              <h4 class="card-title">Identifica y caracteriza los sectores (ejecutor y financiador) que conforman la
-                I+D en el Ecuador</h4>
+              <h4 class="card-title">
+                Identifica y caracteriza los sectores (ejecutor y financiador)
+                que conforman la I+D en el Ecuador
+              </h4>
               <div class="card-body">
-                <p>Las actividades económicas y estratégicas de los diferentes sectores económicos del ecuador, los
-                  mismos que son divisiones o ramas de la actividad económica y se distinguen en tres grandes sectores:
-                  primario está formado por las actividades relacionadas con la obtención de los recursos de la
-                  naturaleza, agrícola, ganadero, forestal y pesquero; el sector secundario es el conjunto de
-                  actividades que implican transformación de materias primas y alimentos a través de los más variados
-                  procesos productivos, reservas de petróleo, industria de la energía eléctrica e industria textil; el
-                  sector terciario se encarga de las actividades económicas que no producen bienes materiales de forma
-                  directa, sino servicios que se prestan para satisfacer las necesidades de la población.</p>
-                <p>Sectores financieros: bancos, compañías de seguros, instituciones financieras públicas, cooperativas
-                  de ahorro y crédito y mutualistas.</p>
-
-
+                <p>
+                  Las actividades económicas y estratégicas de los diferentes
+                  sectores económicos del ecuador, los mismos que son divisiones
+                  o ramas de la actividad económica y se distinguen en tres
+                  grandes sectores: primario está formado por las actividades
+                  relacionadas con la obtención de los recursos de la
+                  naturaleza, agrícola, ganadero, forestal y pesquero; el sector
+                  secundario es el conjunto de actividades que implican
+                  transformación de materias primas y alimentos a través de los
+                  más variados procesos productivos, reservas de petróleo,
+                  industria de la energía eléctrica e industria textil; el
+                  sector terciario se encarga de las actividades económicas que
+                  no producen bienes materiales de forma directa, sino servicios
+                  que se prestan para satisfacer las necesidades de la
+                  población.
+                </p>
+                <p>
+                  Sectores financieros: bancos, compañías de seguros,
+                  instituciones financieras públicas, cooperativas de ahorro y
+                  crédito y mutualistas.
+                </p>
               </div>
-
             </div>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
-              <h4 class="card-title">Identifica las líneas de investigación de la Universidad ECOTEC ubíquela dentro de
-                la nomenclatura establecida por la UNESCO</h4>
+              <h4 class="card-title">
+                Identifica las líneas de investigación de la Universidad ECOTEC
+                ubíquela dentro de la nomenclatura establecida por la UNESCO
+              </h4>
               <div class="card-body">
                 <table class="table table-sm">
                   <thead>
-                  <tr>
-                    <th scope="col">ECOTEC</th>
-                    <th scope="col">UNESCO</th>
-                  </tr>
+                    <tr>
+                      <th scope="col">ECOTEC</th>
+                      <th scope="col">UNESCO</th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1. Teoría y desarrollo económico</td>
-                    <td>Antropología económica</td>
-                  </tr>
-                  <tr>
-                    <td>2. Emprendimiento y desarrollo empresarial</td>
-                    <td>Geografía económica</td>
-                  </tr>
-                  <tr>
-                    <td>3. Turismo, hospitalidad y patrimonio</td>
-                    <td>Antropología del turismo</td>
-                  </tr>
-                  <tr>
-                    <td>4. Gestión de las relaciones jurídicas</td>
-                    <td>Derechos Humanos y Justicia</td>
-                  </tr>
-                  <tr>
-                    <td>5. Tecnologías de la información y la comunicación</td>
-                    <td>Antropología social</td>
-                  </tr>
-                  <tr>
-                    <td>6. Marketing tecnología y sociedad.</td>
-                    <td>Antropología social</td>
-                  </tr>
-                  <tr>
-                    <td>7. Comunicación, cultura y tecnología.</td>
-                    <td>Antropología cultural</td>
-                  </tr>
-                  <tr>
-                    <td>8. Medio ambiente y sociedad</td>
-                    <td>Educación ambiental</td>
-                  </tr>
-                  <tr>
-                    <td>9. Gestión de los procesos de la educación</td>
-                    <td>Pedagogía</td>
-                  </tr>
-                  <tr>
-                    <td>10. Psicología, bienestar y sociedad</td>
-                    <td>Antropología social</td>
-                  </tr>
+                    <tr>
+                      <td>1. Teoría y desarrollo económico</td>
+                      <td>Antropología económica</td>
+                    </tr>
+                    <tr>
+                      <td>2. Emprendimiento y desarrollo empresarial</td>
+                      <td>Geografía económica</td>
+                    </tr>
+                    <tr>
+                      <td>3. Turismo, hospitalidad y patrimonio</td>
+                      <td>Antropología del turismo</td>
+                    </tr>
+                    <tr>
+                      <td>4. Gestión de las relaciones jurídicas</td>
+                      <td>Derechos Humanos y Justicia</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        5. Tecnologías de la información y la comunicación
+                      </td>
+                      <td>Antropología social</td>
+                    </tr>
+                    <tr>
+                      <td>6. Marketing tecnología y sociedad.</td>
+                      <td>Antropología social</td>
+                    </tr>
+                    <tr>
+                      <td>7. Comunicación, cultura y tecnología.</td>
+                      <td>Antropología cultural</td>
+                    </tr>
+                    <tr>
+                      <td>8. Medio ambiente y sociedad</td>
+                      <td>Educación ambiental</td>
+                    </tr>
+                    <tr>
+                      <td>9. Gestión de los procesos de la educación</td>
+                      <td>Pedagogía</td>
+                    </tr>
+                    <tr>
+                      <td>10. Psicología, bienestar y sociedad</td>
+                      <td>Antropología social</td>
+                    </tr>
                   </tbody>
                 </table>
-
-
               </div>
-
             </div>
           </div>
         </div>
         <div class="row row-cols-1 g-4 py-2">
           <div class="col">
             <div class="h-100">
-              <h4 class="card-title">Identifique los nombres de los proyectos de investigación que desarrollan los
-                docentes de la Universidad ECOTEC, señale a qué tipo de investigación pertenecen, nombre de los
-                participantes y cuál es el aporte desde la I+D</h4>
+              <h4 class="card-title">
+                Identifique los nombres de los proyectos de investigación que
+                desarrollan los docentes de la Universidad ECOTEC, señale a qué
+                tipo de investigación pertenecen, nombre de los participantes y
+                cuál es el aporte desde la I+D
+              </h4>
               <div class="card-body">
                 <div class="row">
                   <div class="col w-50">
                     <img
                       src="https://firebasestorage.googleapis.com/v0/b/blog-tecnoysociedad.appspot.com/o/images%2FtablaDocentesInvs1.png?alt=media&token=a991f200-619b-467d-adc7-72889e215d35"
-                      class="img-thumbnail flex-sm-grow-1" alt="Investigacion docentes Ecotec">
+                      class="img-thumbnail flex-sm-grow-1"
+                      alt="Investigacion docentes Ecotec"
+                    />
                   </div>
                   <div class="col w-50">
                     <img
                       src="https://firebasestorage.googleapis.com/v0/b/blog-tecnoysociedad.appspot.com/o/images%2Fimagen_2021-02-04_210937.png?alt=media&token=bb120d82-254d-4068-9c2e-273f8156f735"
-                      class="img-thumbnail flex-sm-grow-1" alt="Investigacion docentes Ecotec 2">
+                      class="img-thumbnail flex-sm-grow-1"
+                      alt="Investigacion docentes Ecotec 2"
+                    />
                   </div>
                 </div>
               </div>
-
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- caso 8 -->
+      <div class="container mt-4" *ngIf="id == '8'">
+        <div class="row py-2">
+          <div class="col-sm">
+            <div class="h-100">
+              <h4 class="card-title">
+                ¿Cuáles es el modo de producción de conocimiento que se ajusta
+                al perfil de formación como Ingeniero?
+              </h4>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          width="500"
+                          height="315"
+                          src="https://www.youtube.com/embed/tsJp0YPULgA"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </div>
+                    <div class="col-sm py-4">
+                      <p>
+                        Siguiendo la presentación del video el modo 2 es más
+                        cercano al perfil de formación de un ingeniero, donde la
+                        divulgación de conocimiento, su aplicabilidad o
+                        practicidad es un punto importante para su formación.
+                      </p>
+                      <ul class="list-group">
+                        <p>Ejemplos:</p>
+                        <li class="list-group-item">
+                          Un ingeniero geofísico estudia el comportamiento de la
+                          tierra y busca a través del conocimiento científico
+                          que posee, aplicar las leyes físicas de su estudio
+                          para resolver un problema que se presenta.
+                        </li>
+                        <li class="list-group-item">
+                          Un ingeniero eléctrico estudia la aplicación de la
+                          electricidad, electromagnetismo, etc. para que a
+                          través de estos conocimientos pueda dar solución a un
+                          sistema de generación eléctrica para las personas
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row py-2">
+          <div class="col-sm">
+            <div class="h-100">
+              <h4 class="card-title">
+                ¿Existen hoy nuevas propuestas de estudio que ayude a mantener y
+                entender la producción del conocimiento como aporte a los campos
+                de conocimiento, para promover la innovación tecnológica?
+                Justifique.
+              </h4>
+              <div class="card-body">
+                <p>
+                  El estudio es fundamental para el desarrollo y crecimiento de
+                  nuevas ideas, sin duda alguna la humanidad necesita de la
+                  ciencia y pues la tecnología va de la mano con ella, al igual
+                  que la innovación. El método científico, requiere de la
+                  experiencia para explotar con éxito una novedad de opiniones
+                  en las cuales puedan dominar los problemas sociales y dar
+                  soluciones a las exigencias, mediante continuo desarrollo de
+                  la tecnología e innovando los campos del conocimiento.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 </div>
