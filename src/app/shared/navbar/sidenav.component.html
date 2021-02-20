@@ -42,7 +42,7 @@
           >
         </li>
       </ul>
-      <form class="d-flex" *ngIf="isArticleSite">
+      <div class="d-flex" *ngIf="isArticleSite">
         <input
           class="form-control me-2"
           type="search"
@@ -57,7 +57,7 @@
         >
           Buscar
         </button>
-      </form>
+      </div>
       <li class="nav-item dropdown" *ngIf="isLoginIn">
         <a
           class="nav-link dropdown-toggle"
