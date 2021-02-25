@@ -5,4 +5,5 @@ export class ArticuloModel {
   descripcion: string;
   autor: string;
   idx?:string;
+  fecha: any;
 }

@@ -33,7 +33,7 @@
       <div class="col-md-8">
         <div class="card-body">
           <h2 class="card-title">{{ articulo.titulo }}</h2>
-          <p class="card-text">{{ articulo.resumen }}</p>
+          <p class="card-text mt-2">{{ articulo.resumen }}</p>
           <p>{{ articulo.descripcion }}</p>
         </div>
       </div>
@@ -1144,6 +1144,134 @@
         </div>
 
       </div>
+      <!-- caso 11 -->
+      <div class="container mt-4" *ngIf="id == '11'">
+        <div class="row py-2">
+          <div class="col-sm">
+            <div class="h-100">
+              <h3 class="card-title">
+                Taller 7: Investigacion
+              </h3>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <ngx-extended-pdf-viewer [src]="'../../../assets/docs/taller7.pdf'" useBrowserLocale="true"
+                                               height="70vh" [page]="12"></ngx-extended-pdf-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- caso 12 -->
+      <div class="container mt-4" *ngIf="id == '12'">
+        <div class="row py-2">
+          <div class="col-sm">
+            <div class="h-100">
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿Qué son los derechos de propiedad intelectual?</h4>
+                      <p>
+                        Los derechos intelectuales comprenden principalmente al permiso que le otorgan al autor, creador
+                        e inventor el derecho de ser reconocido como titular de su creación o invento y, por
+                        consiguiente, ser beneficiario del mismo.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿Por qué debe promoverse y protegerse la propiedad intelectual?</h4>
+                      <p>
+                        Promover un sistema de propiedad intelectual eficaz y equitativo puede contribuir a que todos
+                        los individuos de los países en general exploten el potencial de la propiedad intelectual como
+                        catalizador de desarrollo económico y de bienestar social y cultural.
+                      </p>
+                      <p>
+                        El objetivo es resaltar que todas las grandes innovaciones, ya sean artísticas o tecnológicas,
+                        tienen una historia personal y humana; la de aquellas personas cuya curiosidad, inspiración y
+                        determinación les han llevado a crear, innovar y realizar su proyecto. Algunas de estas
+                        innovaciones han llegado a cambiar la manera en que funciona la sociedad.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿Por qué es importante una Patente para el desarrollo científico
+                        tecnológico de un país?</h4>
+                      <p>
+                        Las patentes constituyen uno de los indicadores de innovación y desarrollo tecnológico más
+                        importante de un país. Las patentes son en algunos casos los activos fundamentales y protección
+                        jurídica de dichas compañías, su defensa contra posibles infractores y eso les hace asegurar su
+                        posición en el mercado.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿Qué tiempo dura una patente en Ecuador?</h4>
+                      <p>
+                        La patente tiene una duración de 20 años contados a partir de la fecha de presentación de la
+                        respectiva solicitud. El plazo de duración del modelo de utilidad será de 10 años contados desde
+                        la fecha de presentación de la solicitud.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿La patente tiene validez en todo el mundo? </h4>
+                      <p>
+                        Las patentes son derechos territoriales. Por lo general, los derechos exclusivos
+                        correspondientes solo tienen validez en el país o la región en los que se ha presentado la
+                        solicitud y se ha concedido la patente, de conformidad con la normativa de ese país o región.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿Existen diferencias entre patente y modelo de utilidad? Justfique.</h4>
+                      <p>
+                        En general, en comparación con las patentes, los sistemas de modelos de utilidad requieren el
+                        cumplimiento de requisitos menos estrictos (por ejemplo, un nivel más bajo de actividad
+                        inventiva), tienen procedimientos más simples y ofrecen un período de protección más corto.
+                        Diseñado principalmente para responder a las necesidades de los innovadores locales, los
+                        requisitos y procedimientos para obtener protección y la duración de la protección varían de un
+                        país a otro.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm py-4">
+                      <h4 class="h5 fw-bold">¿Qué pasa si una persona explota el proceso o producto patentado sin el
+                        consentimiento del titular de la patente? ¿Existen alguna sanción?</h4>
+                      <p>
+                        Según la Ley de propiedad intelectual en Ecuador:
+                      </p>
+                      <ul class="list-group">
+                        <li class="list-group-item">Art. 333. El SENADI a través de las Direcciones nacionales ejercerá, de oficio o a petición de
+                          parte, funciones de inspección, vigilancia y sanción para evitar y reprimir violaciones a los
+                          derechos sobre la propiedad intelectual.
+                        </li>
+                        <li class="list-group-item">
+                          Art. 334. Cualquier persona afectada por la violación o posible violación de los derechos de
+                          propiedad intelectual podrá requerir al SENADI la adopción de las siguientes medidas:
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
+
